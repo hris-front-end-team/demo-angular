@@ -10,6 +10,7 @@ import { OtherPageComponent } from './other-page/other-page.component';
 import { appRoutes } from "app/app/app-routing.module";
 import { RouterModule } from "@angular/router";
 import { MainPageComponent } from './main-page/main-page.component';
+import { GeoLocationService } from './shared/geo-location.service';
 
 @NgModule({
   // declarations are used by Angular compiler (run time) when compiling templates
@@ -25,7 +26,9 @@ import { MainPageComponent } from './main-page/main-page.component';
     FormsModule,
     HttpModule,
   ],
-  providers: [],
+  providers: [
+    GeoLocationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
